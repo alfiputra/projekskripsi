@@ -1,64 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_margin="15dp"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/soal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Soal"
-        android:textSize="20sp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:id="@+id/pil_A"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan A" />
-
-        <RadioButton
-            android:id="@+id/pil_B"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan B" />
-
-        <RadioButton
-            android:id="@+id/pil_C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan C" />
-
-        <RadioButton
-            android:id="@+id/pil_D"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan D" />
-
-        <RadioButton
-            android:id="@+id/pil_E"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilihan E" />
-    </RadioGroup>
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
+            android:padding="5dp"
+            android:orientation="vertical" >
 
-</LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvKetentuanKuesioner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvKetentuanKuesioner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ketentuan"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPertanyaanNomer1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPertanyaanNomer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer1"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer1Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer1Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer1Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer1Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke4"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer1Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer2"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer2Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer2Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer2Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer2Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke4"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer2Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer3"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer3Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer3Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer3Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer3Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke4"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer3Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer123Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer4Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer4Ke1"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer4Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer4Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer4Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer4Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer4Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer4Ke4"/>
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer4Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer4Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer5"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer5Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer5Ke1" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer5Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer5Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer5Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer5Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer5Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer5Ke4" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer5Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer5Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer6"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer6Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer6Ke1" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer6Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer6Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer6Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer6Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer6Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer6Ke4" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer6Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer6Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSoalNomer7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvSoalNomer7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soalNomer7"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgOpsiNomer7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer7Poin0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer7Ke1" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer7Poin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer7Ke2" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer7Poin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer7Ke3" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer7Poin3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer7Ke4" />
+
+                        <RadioButton
+                            android:id="@+id/rbOpsiNomer7Poin4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rbSoalNomer7Ke5" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnProses"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnProsesKuesioner" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

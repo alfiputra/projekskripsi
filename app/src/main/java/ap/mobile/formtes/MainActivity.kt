@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btMenuTerapi.setOnClickListener() {
+        menu_terapi.setOnClickListener() {
             intent = Intent(this, MenuTerapi::class.java)
             startActivity(intent)
         }
 
-        btMenuTes .setOnClickListener(){
+        menu_tes.setOnClickListener(){
             intent = Intent(this, MenuTes::class.java)
             startActivity(intent)
         }
