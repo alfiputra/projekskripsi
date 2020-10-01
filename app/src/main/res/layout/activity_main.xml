@@ -49,13 +49,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/terapi_insomnia"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvMenuTerapi"
                     android:textStyle="bold|italic"
-
                     android:textAlignment="center"/>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -83,12 +84,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/tes_insomnia" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvMenuTes"
                     android:textStyle="bold|italic"
                     android:textAlignment="center"/>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
