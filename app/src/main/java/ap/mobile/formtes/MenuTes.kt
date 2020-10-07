@@ -17,7 +17,7 @@ class MenuTes : AppCompatActivity() {
         "Sama Sekali Tidak Berpengaruh" to 0,"Sedikit Berpengaruh" to 1, "Cukup Berpengaruh" to 2, "Sangat Berpengaruh" to 3, "Luar Biasa Berpengaruh" to 4)
 
     private lateinit var btnProses: Button
-    var hasil:Int=0
+    var hasil: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

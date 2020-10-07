@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         menu_terapi.setOnClickListener() {
-            intent = Intent(this, MenuTerapi::class.java)
+            intent = Intent(this, MenuTerapiAsmrtist::class.java)
             startActivity(intent)
         }
 
