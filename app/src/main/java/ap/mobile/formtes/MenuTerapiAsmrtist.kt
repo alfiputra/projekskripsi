@@ -22,11 +22,11 @@ class MenuTerapiAsmrtist :AppCompatActivity () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_terapi_asmrtist)
 
-        val items = listOf<listAsmrtist>(
-            listAsmrtist("jojo_asmr",R.drawable.jojo_asmr, R.drawable.jojo_asmr, "aaaaaa"),
-            listAsmrtist("dennis_asmr",R.drawable.dennis_asmr, R.drawable.dennis_asmr, "bbbbbb"),
-            listAsmrtist("tingting_asmr",R.drawable.tingting_asmr, R.drawable.tingting_asmr, "cccccc")
-        )
+//        val items = listOf<listAsmrtist>(
+//            listAsmrtist("jojo_asmr",R.drawable.jojo_asmr, R.drawable.jojo_asmr, "aaaaaa"),
+//            listAsmrtist("dennis_asmr",R.drawable.dennis_asmr, R.drawable.dennis_asmr, "bbbbbb"),
+//            listAsmrtist("tingting_asmr",R.drawable.tingting_asmr, R.drawable.tingting_asmr, "cccccc")
+//        )
 
         val a_json: String
 

@@ -1,20 +1,20 @@
 [
   {
     "name" : "Jojo's ASMR",
-    "description" : "tingling asmr",
-    "profile" : 1,
-    "thumbnail": 1
+    "description" : "slowly asmr",
+    "profile" : "https://yt3.ggpht.com/a/AATXAJzipUmaXPSRWjoWaC25cTRFsvveBCk8sDf3ogyB=s176-c-k-c0x00ffffff-no-rj",
+    "thumbnail": "https://yt3.ggpht.com/a/AATXAJzipUmaXPSRWjoWaC25cTRFsvveBCk8sDf3ogyB=s176-c-k-c0x00ffffff-no-rj"
   },
   {
     "name" : "Dennis ASMR",
     "description" : "whisper asmr",
-    "profile" : 2,
-    "thumbnail": 2
+    "profile" : "https://yt3.ggpht.com/a/AATXAJyTWb0rjNlUcZDCgCDmI1x5zuvLBRikUZAEywGltg=s176-c-k-c0x00ffffff-no-rj-mo",
+    "thumbnail": "https://yt3.ggpht.com/a/AATXAJyTWb0rjNlUcZDCgCDmI1x5zuvLBRikUZAEywGltg=s176-c-k-c0x00ffffff-no-rj-mo"
   },
   {
     "name" : "Tingting ASMR",
     "description" : "relaxing asmr",
-    "profile" : 3,
-    "thumbnail": 3
+    "profile" : "https://yt3.ggpht.com/a/AATXAJz7UKPrQ292ndcvoSATJmrrwGeN-Vmw2cqTjCzf=s176-c-k-c0x00ffffff-no-rj-mo",
+    "thumbnail": "https://yt3.ggpht.com/a/AATXAJz7UKPrQ292ndcvoSATJmrrwGeN-Vmw2cqTjCzf=s176-c-k-c0x00ffffff-no-rj-mo"
   }
 ]
