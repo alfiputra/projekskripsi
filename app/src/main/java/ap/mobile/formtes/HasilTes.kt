@@ -1,4 +1,12 @@
 package ap.mobile.formtes
 
-class HasilTes {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class HasilTes:AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+    }
 }

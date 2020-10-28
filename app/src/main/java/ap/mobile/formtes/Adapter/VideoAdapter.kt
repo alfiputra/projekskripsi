@@ -1,85 +1,58 @@
 package ap.mobile.formtes.Adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ap.mobile.formtes.R
-import ap.mobile.formtes.data.listVideo
+import ap.mobile.formtes.VideoPlayer
+import ap.mobile.formtes.data.ListVideo
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.layout_list_video.view.*
 
 
-class VideoAdapter(var listVideos: List<listVideo>): RecyclerView.Adapter<VideoAdapter.ViewHolder>() {
+class VideoAdapter(var Videos: List<ListVideo>): RecyclerView.Adapter<VideoAdapter.CustomViewHolder>() {
 
-    private var vClickListener: VideoClickListener? = null
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.layout_video, parent, false)
-        return ViewHolder(v)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val v = layoutInflater.inflate(R.layout.layout_list_video, parent, false)
+        return CustomViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val video = listVideos.get(position)
-        video.let { holder.bindItems(it)
-        }
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
+
+        val video = Videos.get(position)
+
+        holder.v.textView_video_title.text = video.title
+        holder.v.textView_duration.text = video.duration
+
+        val thumbnailImageView =holder.v.imageView_thumbnail
+        Picasso.get().load(video.thumbnail).into(thumbnailImageView)
+
+        holder.listVideo = Videos.get(position)
     }
 
     override fun getItemCount(): Int {
-        return listVideos.size ?:0
+        return Videos.size
     }
 
-    fun getItem(position: Int): listVideo?{
-        return listVideos.get(position)
-    }
 
-    fun setOnItemClickListener(videoClickListener: VideoClickListener){
-        this.vClickListener = videoClickListener
-    }
+    class CustomViewHolder(val v: View, var listVideo: ListVideo? = null): RecyclerView.ViewHolder(v){
 
-    inner class ViewHolder(v: View): RecyclerView.ViewHolder(v), View.OnClickListener {
-        val itemId = itemView.findViewById<TextView>(R.id.txtId)
-        val itemTitle = itemView.findViewById<TextView>(R.id.txtTitle)
-        val itemDuration = itemView.findViewById<TextView>(R.id.txtDuration)
+        companion object{
+            val VIDEO_ID_KEY = "VIDEO_ID"
+        }
 
         init {
-            if (vClickListener != null) {
-                itemView.setOnClickListener(this)
+            v.setOnClickListener {
+
+                val intent = Intent(v.context, VideoPlayer::class.java)
+                intent.putExtra(VIDEO_ID_KEY, listVideo?.id)
+
+                v.context.startActivity(intent)
             }
         }
-
-        fun bindItems(listVideo: listVideo) {
-            itemId.text=listVideo.id
-            itemTitle.text=listVideo.title
-            itemDuration.text=listVideo.duration.toString()
-        }
-
-        override fun onClick(v: View?) {
-            if (v != null) {
-                vClickListener?.onItemClick(v, adapterPosition)
-            }
-        }
-    }
-
-    interface VideoClickListener {
-        fun onItemClick(v: View, position: Int)
     }
 }
-        //lama
-//        val itemId = itemView.findViewById<TextView>(R.id.txtId)
-//        val itemTitle = itemView.findViewById<TextView>(R.id.txtTitle)
-//        val itemDuration = itemView.findViewById<TextView>(R.id.txtDuration)
-//
-//        init {
-//
-//            itemView.setOnClickListener { v: View -> val position: Int = adapterPosition
-//                Toast.makeText(itemView.context, itemTitle.text, Toast.LENGTH_SHORT).show()
 
-        //---
-                //                Toast.makeText(itemView.context,
-//                    "You clicked on item  ${position + 1}",
-//                    Toast.LENGTH_SHORT).show()
-
-//            }
-//        }
-//    }
-//}
