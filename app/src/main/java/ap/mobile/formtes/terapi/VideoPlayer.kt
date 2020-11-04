@@ -1,8 +1,9 @@
-package ap.mobile.formtes
+package ap.mobile.formtes.terapi
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ap.mobile.formtes.Adapter.VideoAdapter
+import ap.mobile.formtes.R
+import ap.mobile.formtes.adapter.VideoAdapter
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView

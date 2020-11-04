@@ -1,9 +1,10 @@
-package ap.mobile.formtes
+package ap.mobile.formtes.terapi
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import ap.mobile.formtes.Adapter.AsmrtistAdapter
+import ap.mobile.formtes.R
+import ap.mobile.formtes.adapter.AsmrtistAdapter
 import ap.mobile.formtes.data.ListAsmrtist
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

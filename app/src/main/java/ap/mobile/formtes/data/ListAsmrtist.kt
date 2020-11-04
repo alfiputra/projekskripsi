@@ -4,7 +4,7 @@ data class ListAsmrtist(
     var name: String,
     var profile: String,
     var description: String,
-    var link:String
+    var link: String
 )
 
 

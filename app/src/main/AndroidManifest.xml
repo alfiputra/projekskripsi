@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".MenuTes"
+            android:name=".tes.SoalTes"
             android:label="Tes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,27 @@
         </activity>
 
         <activity
-            android:name=".MenuTerapiAsmrtist"
+            android:name=".tes.HasilTes"
+            android:label="Hasil">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".tes.SoalTes"/>
+        </activity>
+
+        <activity
+            android:name=".tes.PenyimpananTes"
+            android:label="Riwayat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".terapi.MenuTerapiAsmrtist"
             android:label="Terapi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -41,7 +61,7 @@
         </activity>
 
         <activity
-            android:name=".MenuTerapiVideo"
+            android:name=".terapi.MenuTerapiVideo"
             android:label="List Video">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -49,18 +69,18 @@
             </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MenuTerapiAsmrtist"/>
+                android:value=".terapi.MenuTerapiAsmrtist"/>
         </activity>
 
         <activity
-            android:name=".VideoPlayer"
+            android:name=".terapi.VideoPlayer"
             android:label="Video Player">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".VideoPlayer"/>
+                android:value=".terapi.VideoPlayer"/>
         </activity>
     </application>
 

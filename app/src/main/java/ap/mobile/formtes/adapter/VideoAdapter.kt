@@ -1,4 +1,4 @@
-package ap.mobile.formtes.Adapter
+package ap.mobile.formtes.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ap.mobile.formtes.R
-import ap.mobile.formtes.VideoPlayer
+import ap.mobile.formtes.terapi.VideoPlayer
 import ap.mobile.formtes.data.ListVideo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_list_video.view.*

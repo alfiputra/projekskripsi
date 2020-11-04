@@ -1,11 +1,11 @@
-package ap.mobile.formtes.Adapter
+package ap.mobile.formtes.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ap.mobile.formtes.MenuTerapiVideo
+import ap.mobile.formtes.terapi.MenuTerapiVideo
 import ap.mobile.formtes.R
 import ap.mobile.formtes.data.ListAsmrtist
 import com.squareup.picasso.Picasso
