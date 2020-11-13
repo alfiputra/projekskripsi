@@ -4,26 +4,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/light_grey">
 
-    <TextView
-        android:id="@+id/save_result"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Hasil"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="100dp">
 
-    <TextView
-        android:id="@+id/save_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Hari dan Tanggal"
-        app:layout_constraintEnd_toEndOf="@+id/save_result"
-        app:layout_constraintStart_toStartOf="@+id/save_result"
-        app:layout_constraintTop_toBottomOf="@+id/save_result" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hari dan Tanggal:"/>
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/save_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Hasil Tes yang Diperoleh:"/>
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/save_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tingkat Insomnia yang Anda Alami:"/>
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/desc_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

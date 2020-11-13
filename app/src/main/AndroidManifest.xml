@@ -74,13 +74,13 @@
 
         <activity
             android:name=".terapi.VideoPlayer"
-            android:label="Video Player">
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:screenOrientation="landscape"
+            android:theme="@style/landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".terapi.VideoPlayer"/>
         </activity>
     </application>
 

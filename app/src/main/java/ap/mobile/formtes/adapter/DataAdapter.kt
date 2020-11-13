@@ -10,7 +10,8 @@ import ap.mobile.formtes.room.Data
 import ap.mobile.formtes.tes.PenyimpananTes
 import kotlinx.android.synthetic.main.list_penyimpanan_tes.view.*
 
-class DataAdapter(val allData: ArrayList<Data>): RecyclerView.Adapter<DataAdapter.DataViewHolder>() {
+class DataAdapter(private val allData: ArrayList<Data>): RecyclerView.Adapter<DataAdapter.DataViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val customView = layoutInflater.inflate(R.layout.list_penyimpanan_tes, parent, false)
@@ -18,9 +19,10 @@ class DataAdapter(val allData: ArrayList<Data>): RecyclerView.Adapter<DataAdapte
     }
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
-        val data = allData.get(position)
+        val data = allData[position]
         holder.dataView.save_result.text = data.data
         holder.dataView.save_date.text = data.date
+        holder.dataView.desc_result.text = data.desc
     }
 
     override fun getItemCount(): Int {
@@ -32,14 +34,14 @@ class DataAdapter(val allData: ArrayList<Data>): RecyclerView.Adapter<DataAdapte
 //            val DATA_KEY = "DATA"
 //            val DATE_KEY = "DATE"
 //        }
-        init {
-            dataView.setOnClickListener{
-                val intent = Intent(dataView.context, PenyimpananTes::class.java)
-//                intent.putExtra(DATA_KEY, data?.data)
-//                intent.putExtra(DATE_KEY, data?.date)
-                dataView.context.startActivity(intent)
-            }
-        }
+//        init {
+//            dataView.setOnClickListener{
+//                val intent = Intent(dataView.context, PenyimpananTes::class.java)
+////                intent.putExtra(DATA_KEY, data?.data)
+////                intent.putExtra(DATE_KEY, data?.date)
+//                dataView.context.startActivity(intent)
+//            }
+//        }
     }
 
     fun setData(list: List<Data>){

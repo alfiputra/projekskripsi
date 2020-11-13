@@ -47,4 +47,5 @@
     <string name="tvJudul">menu</string>
     <string name="tvMenuTerapi">Terapi</string>
     <string name="tvMenuTes">Tes</string>
+    <string name="tvMenuRiwayat">Riwayat Tes</string>
 </resources>

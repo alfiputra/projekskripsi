@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import ap.mobile.formtes.terapi.MenuTerapiAsmrtist
+import ap.mobile.formtes.tes.PenyimpananTes
 import ap.mobile.formtes.tes.SoalTes
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -22,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         menu_tes.setOnClickListener(){
             intent = Intent(this, SoalTes::class.java)
+            startActivity(intent)
+        }
+
+        menu_riwayat.setOnClickListener {
+            intent = Intent(this, PenyimpananTes::class.java)
             startActivity(intent)
         }
     }

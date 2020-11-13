@@ -32,23 +32,5 @@ abstract class DataDB: RoomDatabase() {
             DataDB::class.java,
             "data_db"
         ).build()
-
-//        @Volatile
-//        private var INSTANCE: DataDB? = null
-//
-//        fun getDatabase(context: Context): DataDB {
-//            // if the INSTANCE is not null, then return it,
-//            // if it is, then create the database
-//            return INSTANCE ?: synchronized(this) {
-//                val instance = Room.databaseBuilder(
-//                    context.applicationContext,
-//                    DataDB::class.java,
-//                    "data_db"
-//                ).build()
-//                INSTANCE = instance
-//                // return instance
-//                instance
-//            }
-//        }
     }
 }

@@ -8,5 +8,6 @@ data class Data(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val data: String,
-    val date: String
+    val date: String,
+    val desc: String
 )

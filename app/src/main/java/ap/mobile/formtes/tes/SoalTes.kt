@@ -64,7 +64,6 @@ class SoalTes : AppCompatActivity() {
     }
 
     fun setupListener(){
-
         btnProses.setOnClickListener {
             val hasilTes = hasil.toString()
             val intent = Intent(this@SoalTes, HasilTes::class.java)
