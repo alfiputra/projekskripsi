@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import ap.mobile.formtes.R
-import ap.mobile.formtes.adapter.AsmrtistAdapter
+import ap.mobile.formtes.adapter.KategoriAdapter
 import ap.mobile.formtes.adapter.VideoAdapter
 import ap.mobile.formtes.data.ListVideo
 import com.google.gson.Gson
@@ -20,9 +20,9 @@ class MenuTerapiVideo :AppCompatActivity () {
         setContentView(R.layout.menu_terapi_list_video)
 
         val vJson: String
-        val navBarTitle = intent.getStringExtra(AsmrtistAdapter.CustomViewHolder.CHANNEL_NAME_KEY)
+        val navBarTitle = intent.getStringExtra(KategoriAdapter.CustomViewHolder.CHANNEL_NAME_KEY)
         supportActionBar?.title = navBarTitle
-        val source = intent.getStringExtra(AsmrtistAdapter.CustomViewHolder.LINK_VIDEO_JSON_KEY)
+        val source = intent.getStringExtra(KategoriAdapter.CustomViewHolder.LINK_VIDEO_JSON_KEY)
 //        println(source)
 
         try {

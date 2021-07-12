@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1089685370894",
+    "project_id": "asmrplayer-244ba",
+    "storage_bucket": "asmrplayer-244ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089685370894:android:dc406fb56c08e9cc97645f",
+        "android_client_info": {
+          "package_name": "ap.mobile.formtes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089685370894-keg4slsjin4tou2427tlnomngl0bq4b4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-3unbzRjNfmYP8xBeBaFdelzJ3neguT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089685370894-keg4slsjin4tou2427tlnomngl0bq4b4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

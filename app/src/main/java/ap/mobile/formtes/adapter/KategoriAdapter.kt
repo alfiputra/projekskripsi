@@ -7,36 +7,35 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ap.mobile.formtes.terapi.MenuTerapiVideo
 import ap.mobile.formtes.R
-import ap.mobile.formtes.data.ListAsmrtist
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.layout_list_asmrtist.view.*
+import ap.mobile.formtes.data.ListKategori
+import kotlinx.android.synthetic.main.layout_kategori_insomnia.view.*
 
-class AsmrtistAdapter(val Asmrtist: List<ListAsmrtist>): RecyclerView.Adapter<AsmrtistAdapter.CustomViewHolder>() {
+class KategoriAdapter(val kategori: List<ListKategori>): RecyclerView.Adapter<KategoriAdapter.CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val customView = layoutInflater.inflate(R.layout.layout_list_asmrtist, parent, false)
+        val customView = layoutInflater.inflate(R.layout.layout_kategori_insomnia, parent, false)
         return CustomViewHolder(customView)
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val asmr = Asmrtist.get(position)
+        val asmr = kategori.get(position)
 
         holder.v.textView_asmrtist.text = asmr.name
         holder.v.textView_description.text = asmr.description
 
-        val profileImageView = holder.v.imageView_profile_asmrtist
-        Picasso.get().load(asmr.profile).into(profileImageView)
+//        val profileImageView = holder.v.imageView_profile_asmrtist
+//        Picasso.get().load(asmr.profile).into(profileImageView)
 
-        holder.listsmrtist = Asmrtist.get(position)
+        holder.listsmrtist = kategori.get(position)
     }
 
     override fun getItemCount(): Int {
-        return Asmrtist.size
+        return kategori.size
     }
 
 
-    class CustomViewHolder(val v: View, var listsmrtist: ListAsmrtist? = null): RecyclerView.ViewHolder(v){
+    class CustomViewHolder(val v: View, var listsmrtist: ListKategori? = null): RecyclerView.ViewHolder(v){
 
         companion object{
             val LINK_VIDEO_JSON_KEY = "LINK_VIDEO_JSON"

@@ -3,31 +3,31 @@
 
     <string name="ketentuan">Jawablah Kuesioner dibawah ini untuk mengetahui seberapa parah Insomnia yang Anda derita.</string>
 
-    <string name="soalNomer1">1. Apakah Anda mengalami kesulitan untuk tidur ?</string>
-    <string name="soalNomer2">2. Apakah Anda mengalami sulit untuk mempertahankan tidur?</string>
-    <string name="soalNomer3">3. Apakah Anda mengalami terbangun lebih cepat dari biasanya?</string>
-    <string name="rbSoalNomer123Ke1">Tidak Ada</string>
+    <string name="soalNomer1">1. Apa yang Anda rasakan ketika mengalami kesulitan tidur ?</string>
+    <string name="soalNomer2">2. Apa yang Anda rasakan ketika terjaga di malam hari disaat Anda merasa ingin tidur? </string>
+    <string name="soalNomer3">3. Apa yang Anda rasakan ketika Anda bangun lebih awal dari biasanya?</string>
+    <string name="rbSoalNomer123Ke1">Tidak</string>
     <string name="rbSoalNomer123Ke2">Ringan</string>
     <string name="rbSoalNomer123Ke3">Sedang</string>
     <string name="rbSoalNomer123Ke4">Berat</string>
     <string name="rbSoalNomer123Ke5">Sangat Parah</string>
 
-    <string name="soalNomer4">4. Seberapa PUAS / TIDAK PUAS Anda dengan kebiasaan tidur saat ini?</string>
+    <string name="soalNomer4">4. Seberapa PUAS / TIDAK PUAS Anda dengan kebiasan tidur Anda saat ini?</string>
     <string name="rbSoalNomer4Ke1">Sangat Puas</string>
     <string name="rbSoalNomer4Ke2">Puas</string>
     <string name="rbSoalNomer4Ke3">Cukup Puas</string>
     <string name="rbSoalNomer4Ke4">Tidak Puas</string>
     <string name="rbSoalNomer4Ke5">Sangat Tidak Puas</string>
 
-    <string name="soalNomer5">5. Menurut pengamatan orang lain, seberapa terlihatkah
+    <string name="soalNomer5">5. Menurut PENGAMATAN orang lain, seberapa terlihatkah
         pengaruh masalah tidur pada kualitas hidup Anda?</string>
-    <string name="rbSoalNomer5Ke1">Sama Sekali Tiidak Terlihat</string>
+    <string name="rbSoalNomer5Ke1">Sama Sekali Tidak Terlihat</string>
     <string name="rbSoalNomer5Ke2">Sedikit Terlihat</string>
     <string name="rbSoalNomer5Ke3">Cukup Terlihat</string>
     <string name="rbSoalNomer5Ke4">Sangat Terlihat</string>
     <string name="rbSoalNomer5Ke5">Luar Biasa Terlihat</string>
 
-    <string name="soalNomer6">6. Seberapa KHAWATIR / KESAL Anda dengan masalah tidur saat ini?</string>
+    <string name="soalNomer6">6. Seberapa KHAWATIR / CEMAS Anda dengan masalah tidur saat ini?</string>
     <string name="rbSoalNomer6Ke1">Sama Sekali Tidak Khawatir</string>
     <string name="rbSoalNomer6Ke2">Sedikit Khawatir</string>
     <string name="rbSoalNomer6Ke3">Cukup Khawatir</string>
@@ -35,8 +35,8 @@
     <string name="rbSoalNomer6Ke5">Luar Biasa Khawatir</string>
 
     <string name="soalNomer7">7. Menurut Anda, seberapa BERPENGARUHKAH masalah tidur Anda
-        SAAT INI pada kegiatan hidup sehari-hari (seperti: mengantuk di siang hari, perasaan,
-        kemampuan untuk mengerjakan pekerjaan atau pekerjaan rumah harian, konsentrasi, ingatan, dan lainnya)?</string>
+        SAAT INI pada kegiatan hidup sehari-hari (seperti: mengantuk di siang hari, keadaan emosional,
+        melakukan sesuatu dalam kegiatan sehari-hari, berkonsentrasi, daya ingat dan lainnya)?</string>
     <string name="rbSoalNomer7Ke1">Sama Sekali Tidak Berpengaruh</string>
     <string name="rbSoalNomer7Ke2">Sedikit Berpengaruh</string>
     <string name="rbSoalNomer7Ke3">Cukup Berpengaruh</string>
@@ -48,4 +48,6 @@
     <string name="tvMenuTerapi">Terapi</string>
     <string name="tvMenuTes">Tes</string>
     <string name="tvMenuRiwayat">Riwayat Tes</string>
+    <string name="durasi">TIngkat Durasi</string>
+    <string name="bantuan">Bantuan Aplikasi</string>
 </resources>

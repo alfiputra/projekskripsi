@@ -7,7 +7,7 @@
     <color name="light_grey">#D6D6D6</color>
 
     <color name="biasa">#64DD17</color>
-    <color name="normal">#FFD600</color>
+    <color name="ringan">#FFD600</color>
     <color name="sedang">#FF6D00</color>
     <color name="parah">#D50000</color>
 </resources>

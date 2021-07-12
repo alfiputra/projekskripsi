@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:id="@+id/main_background"
+    tools:context=".MainActivity"
+    >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="2"
+        android:columnCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="100dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/PenilaianTes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="Rincian Penilaian Tes"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Range Nilai:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PenilaianTes" />
+
+                <TextView
+                    android:id="@+id/normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0–7 = Anda tidak mengalami Insomnia"
+                    app:layout_constraintStart_toStartOf="@+id/range"
+                    app:layout_constraintTop_toBottomOf="@+id/range" />
+
+                <TextView
+                    android:id="@+id/ringan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="8–14 = Anda Mengalami Insomnia Ringan"
+                    app:layout_constraintStart_toStartOf="@+id/range"
+                    app:layout_constraintTop_toBottomOf="@+id/normal" />
+
+                <TextView
+                    android:id="@+id/sedang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="15–21 = Anda Mengalami Insomnia Sedang"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@+id/range"
+                    app:layout_constraintTop_toBottomOf="@+id/ringan" />
+
+                <TextView
+                    android:id="@+id/berat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="22–28 = Anda Mengalami Insomnia Berat"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@+id/range"
+                    app:layout_constraintTop_toBottomOf="@+id/sedang" />
+
+                <TextView
+                    android:id="@+id/catatanTes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Catatan:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/range"
+                    app:layout_constraintTop_toBottomOf="@+id/berat" />
+
+                <TextView
+                    android:id="@+id/PenjelasanTes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Penderita Insomnia memperoleh Nilai Tes setelah     menjawab soal yang telah disediakan."
+                    app:layout_constraintStart_toStartOf="@+id/catatanTes"
+                    app:layout_constraintTop_toBottomOf="@+id/catatanTes" />
+
+                <TextView
+                    android:id="@+id/PenggunaanTerapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:text="Rincian Penggunaan Terapi"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PenjelasanTes" />
+
+                <TextView
+                    android:id="@+id/kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Range Kategori:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PenggunaanTerapi" />
+
+                <TextView
+                    android:id="@+id/kRingan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="1. Kategori Insomnia Ringan "
+                    app:layout_constraintStart_toStartOf="@+id/kategori"
+                    app:layout_constraintTop_toBottomOf="@+id/kategori" />
+
+                <TextView
+                    android:id="@+id/kSedang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="2. Kategori Insomnia Sedang"
+                    app:layout_constraintStart_toStartOf="@+id/kategori"
+                    app:layout_constraintTop_toBottomOf="@+id/kRingan" />
+
+                <TextView
+                    android:id="@+id/kBerat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="3. Kategori Insomnia Berat"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="@+id/kategori"
+                    app:layout_constraintTop_toBottomOf="@+id/kSedang" />
+
+                <TextView
+                    android:id="@+id/catatanTerapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Catatan:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/kategori"
+                    app:layout_constraintTop_toBottomOf="@+id/kBerat" />
+
+                <TextView
+                    android:id="@+id/PenjelasanTerapi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="1. Posisikan diri anda senyaman mungkin dan gunakan Earphone, agar mendapatkan hasil yang lebih baik."
+                    app:layout_constraintStart_toStartOf="@+id/catatanTerapi"
+                    app:layout_constraintTop_toBottomOf="@+id/catatanTerapi" />
+
+                <TextView
+                    android:id="@+id/PenjelasanTerapi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="2. Perbedaan dari tiap kategori adalah dari durasi video   ASMR yang dimainkan."
+                    app:layout_constraintStart_toStartOf="@+id/catatanTerapi"
+                    app:layout_constraintTop_toBottomOf="@+id/PenjelasanTerapi1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</RelativeLayout>

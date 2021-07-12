@@ -1,13 +1,17 @@
 package ap.mobile.formtes.tes
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import ap.mobile.formtes.MainActivity
 import ap.mobile.formtes.R
 import ap.mobile.formtes.adapter.DataAdapter
 import ap.mobile.formtes.room.Data
 import ap.mobile.formtes.room.DataDB
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.hasil_tes.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,7 +35,7 @@ class HasilTes:AppCompatActivity()  {
         val hasilTes = findViewById<TextView>(R.id.textView)
         hasilTes.text = hasil
 
-        val hasilDeskripsi = findViewById<TextView>(R.id.text_deskripsi)
+        val hasilDeskripsi = findViewById<TextView>(R.id.text_catatan)
         if(hasil.toInt() <= 7){
             hasilDeskripsi.text ="Anda tidak mengalami Insomnia"
         } else if (hasil.toInt() <= 14){
@@ -42,8 +46,6 @@ class HasilTes:AppCompatActivity()  {
             hasilDeskripsi.text = "Anda Mengalami Insomnia Parah"
         }
 
-
-
         val calendar = Calendar.getInstance()
         val currentDate: String = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.time)
         val date = findViewById<TextView>(R.id.textView_date)
@@ -53,19 +55,22 @@ class HasilTes:AppCompatActivity()  {
     }
 
     fun setupListener(){
-        button.setOnClickListener{
+        button_save.setOnClickListener{
             CoroutineScope(Dispatchers.IO).launch {
                 db.dataDao().insertData(
                     Data(
                         0,
                         textView.text.toString(),
                         textView_date.text.toString(),
-                        text_deskripsi.text.toString())
+                        text_catatan.text.toString())
                 )
             }
-            intent = Intent(this, PenyimpananTes::class.java)
+            Toast.makeText(this, "Hasil Berhasil Disimpan", Toast.LENGTH_LONG).show()
+        }
+
+        button_home.setOnClickListener{
+            intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
-
 }

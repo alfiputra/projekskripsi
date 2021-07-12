@@ -9,6 +9,7 @@
     android:padding="10dp">
 
     <ScrollView
+        android:id="@+id/scroll_soal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -256,7 +257,7 @@
                             android:id="@+id/rbOpsiNomer4Poin0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/rbSoalNomer4Ke1"/>
+                            android:text="@string/rbSoalNomer4Ke1" />
 
                         <RadioButton
                             android:id="@+id/rbOpsiNomer4Poin1"
@@ -274,7 +275,7 @@
                             android:id="@+id/rbOpsiNomer4Poin3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/rbSoalNomer4Ke4"/>
+                            android:text="@string/rbSoalNomer4Ke4" />
 
                         <RadioButton
                             android:id="@+id/rbOpsiNomer4Poin4"

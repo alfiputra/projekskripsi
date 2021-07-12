@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class Data(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val data: String,
+    val result: String,
     val date: String,
-    val desc: String
+    val note: String
 )

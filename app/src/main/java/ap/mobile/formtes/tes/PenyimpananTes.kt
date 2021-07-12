@@ -34,8 +34,14 @@ class PenyimpananTes: AppCompatActivity() {
                 dataAdapter.setData(notes)
             }
         }
+//
+//        CoroutineScope(Dispatchers.IO).launch {
+//            val lastnotes = db.dataDao().getLastData()
+//            withContext(Dispatchers.Main){
+//                dataAdapter.setData(lastnotes)
+//            }
+//        }
     }
-
 
     fun setupRecycleview(){
         dataAdapter = DataAdapter(arrayListOf())

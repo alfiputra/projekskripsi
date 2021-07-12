@@ -20,9 +20,9 @@ class DataAdapter(private val allData: ArrayList<Data>): RecyclerView.Adapter<Da
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         val data = allData[position]
-        holder.dataView.save_result.text = data.data
+        holder.dataView.save_result.text = data.result
         holder.dataView.save_date.text = data.date
-        holder.dataView.desc_result.text = data.desc
+        holder.dataView.desc_result.text = data.note
     }
 
     override fun getItemCount(): Int {
@@ -30,18 +30,18 @@ class DataAdapter(private val allData: ArrayList<Data>): RecyclerView.Adapter<Da
     }
 
     class DataViewHolder(val dataView: View): RecyclerView.ViewHolder(dataView){
-//        companion object{
-//            val DATA_KEY = "DATA"
-//            val DATE_KEY = "DATE"
-//        }
-//        init {
-//            dataView.setOnClickListener{
-//                val intent = Intent(dataView.context, PenyimpananTes::class.java)
-////                intent.putExtra(DATA_KEY, data?.data)
-////                intent.putExtra(DATE_KEY, data?.date)
-//                dataView.context.startActivity(intent)
-//            }
-//        }
+        companion object{
+            val DATA_KEY = "DATA"
+            val DATE_KEY = "DATE"
+        }
+        init {
+            dataView.setOnClickListener{
+                val intent = Intent(dataView.context, PenyimpananTes::class.java)
+//                intent.putExtra(DATA_KEY, data?.data)
+//                intent.putExtra(DATE_KEY, data?.date)
+                dataView.context.startActivity(intent)
+            }
+        }
     }
 
     fun setData(list: List<Data>){
